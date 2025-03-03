@@ -48,3 +48,25 @@ docker tag "$($imageName):$($tag)" "$($registry)/$($imageName):$($tag)"
 docker push "$($registry)/$($imageName):$($tag)"
 
 ```
+
+
+## Figuring out [Giscus](https://github.com/giscus/giscus)
+
+I will not talk about how it took me 1 hour to figure out how to configure the themes. (The light theme was unusable, and the dark theme wasn't that good either)
+
+This is the result: 
+
+```ts
+Component.Comments({
+    provider: "giscus",
+    options: {
+    repo: "vycdev/blog",
+    repoId: "R_kgDOOCiRuQ",
+    category: "General",
+    categoryId: "DIC_kwDOOCiRuc4Cnhmn",
+    themeUrl: "https://giscus.app/themes",
+    lightTheme: "catppuccin_latte",
+    darkTheme: "catppuccin_mocha",
+    },
+})
+```

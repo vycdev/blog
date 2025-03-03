@@ -5,7 +5,20 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+      provider: "giscus",
+      options: {
+        repo: "vycdev/blog",
+        repoId: "R_kgDOOCiRuQ",
+        category: "General",
+        categoryId: "DIC_kwDOOCiRuc4Cnhmn",
+        themeUrl: "https://giscus.app/themes",
+        lightTheme: "catppuccin_latte",
+        darkTheme: "catppuccin_mocha",
+      },
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/vycdev",
