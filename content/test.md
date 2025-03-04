@@ -37,17 +37,6 @@ Can render `inline code`, _italics_, **strong**, 😄
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id sem purus, eu commodo tortor. Donec malesuada ultricies dolor a eleifend. In hac habitasse platea dictumst. Vivamus a faucibus ligula. Nullam molestie tristique arcu, eu elementum metus ultricies sed. Aenean luctus congue lectus, vitae semper erat rhoncus non. Nulla facilisi.
 
-Horizontal rule:
-
-Table Header 1	Table Header 2
-Content	https://github.com/laymonage/giscus
-Content	[http://github.com:\](https://github.com:%5C)<test>
-I'm below the table.	
-A table with an empty cell and unaligned indenting.
-
-Table Header 1	Table Header 2
-Content	Content
-Content	
 ```
 def this_is
   puts "some #{4-space-indent} code"

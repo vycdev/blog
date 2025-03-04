@@ -1,6 +1,12 @@
-# Welcome 
+---
+title: Welcome to my blog
+draft: false
+tags:
+  - example-tag
+---
+This is my personal blog, I set it up using [Quartz 4](https://quartz.jzhao.xyz/), it's pretty cool, but not perfect, there are some things that annoyed me during setup and I bet there are many other things that it's lacking. Anyhow this is website is a WIP. 
 
-Welcome to my blog. 
+# WIP
 
 I'm still figuring out how to set Quartz so until then, you can enjoy this picture of a cat
 
@@ -49,8 +55,7 @@ docker push "$($registry)/$($imageName):$($tag)"
 
 ```
 
-
-## Figuring out [Giscus](https://github.com/giscus/giscus)
+# Figuring out [Giscus](https://github.com/giscus/giscus)
 
 I will not talk about how it took me 1 hour to figure out how to configure the themes. (The light theme was unusable, and the dark theme wasn't that good either)
 
@@ -70,3 +75,5 @@ Component.Comments({
     },
 })
 ```
+
+
