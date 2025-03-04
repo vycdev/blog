@@ -1,3 +1,4 @@
+import { composeVisitors } from "lightningcss"
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
@@ -21,6 +22,8 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
+      RSS: "/index.xml",
+      YouTube: "https://www.youtube.com/@vycdev",
       GitHub: "https://github.com/vycdev",
       Discord: "https://discord.gg/nU63sFMcnX",
     },
@@ -42,9 +45,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.MobileOnly(Component.TableOfContents()),
   ],
   right: [
-    Component.DesktopOnly(Component.Graph()),
+    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
