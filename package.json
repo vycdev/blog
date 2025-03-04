@@ -19,8 +19,7 @@
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "publish": "powershell -ExecutionPolicy Bypass -File ./publish/publish.ps1",
-    "dev": "npx quartz build --serve",
-    "update": "npx quartz update"
+    "dev": "npx quartz build --serve"
   },
   "engines": {
     "npm": ">=9.3.1",
