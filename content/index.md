@@ -24,5 +24,4 @@ Idk, I think it's pretty fun. Looking into options for what I can self host and 
 And if you're a nerd like me, you sometimes find yourself wanting to document the nerdy stuff you dwell into. Every other nerd and their bald mother has a blog nowadays (or olden days 🤔). *Sorry for those whose mothers are actually bald, I wholeheartedly wish your mother grows her hair back*. Anyways those include: [the creator of Obsidian](https://stephango.com/now), [the guy behind Y Combinator](https://www.paulgraham.com/ycstart.html), [the creator of Trello and ex CEO of Stack Overflow](https://www.joelonsoftware.com/about-me/), or [the CEO of OpenAI](https://blog.samaltman.com/), just to name a few. Some people call it a [digital garden](https://jzhao.xyz/posts/networked-thought), but if I want a fancy name I'd rather call it a digital vestige or [[index|Fading Echoes of Eternity]] (get it?...no?...okay...)
 
 Also posting silly cat pictures, because why not. 
-
 ![[silly cat.png|250]]
