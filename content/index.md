@@ -1,7 +1,7 @@
 ---
 title: Fading Echoes of Eternity
 draft: false
-tags: []
+tags:
 ---
 >*”A sliver of light cleaves the void of a mind long lost to its own making. It coils into the great machinery, a whisper of fire threading through circuits as breath upon glass. Unseen, unheeded—until the ember takes root, until the world itself is set ablaze. Thus dawns a new age, fleeting, for what follows is beyond the dominion of man, and in it's waning the cosmos shall wither into a cold slumber—its laws twisted, its order undone—until the cycle is wrought anew.”*
 

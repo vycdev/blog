@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     baseUrl: "blog.vycdev.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages: false,
+    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
