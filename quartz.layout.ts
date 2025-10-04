@@ -26,6 +26,7 @@ export const sharedPageComponents: SharedLayout = {
       YouTube: "https://www.youtube.com/@vycdev",
       GitHub: "https://github.com/vycdev",
       Discord: "https://discord.gg/nU63sFMcnX",
+      Patreon: "https://www.patreon.com/vycdev",
     },
   }),
 }
