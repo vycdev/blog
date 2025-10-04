@@ -1,5 +1,6 @@
 ---
 title: Infinity Tic Tac Toe
+date: 2025-09-01
 ---
 > *“Ages collapse into dust, sinking into a sea of silence. Beneath indifferent stars, two shadows drift in exile—unmoored from time, unclaimed by any home. To stave off dissolution they trace a game without edges, each move reverberating through the void. Within its fragile pattern endures defiance: the ember of a species unwilling to be erased.”*
 

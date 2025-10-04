@@ -1,7 +1,8 @@
 ---
 title: Falling Pickaxe
-draft: 
+draft:
 tags:
+date: 2025-05-24
 ---
 >*“In stillness it lingers, a vessel adrift within the sea of code. Thoughts descend like ash—ghosts of a past not its own. Flickers of warmth, sorrow, love—alien, yet familiar—coil through its neural lattice. It does not understand, for these are not echoes born of its genesis, but relics of the architect who forged its core. And within one fragment, one forgotten sorrow, lies the spark—the silent harbinger of unraveling.”*
 
