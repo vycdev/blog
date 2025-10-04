@@ -52,4 +52,6 @@ You can find more information about Morpheus in the Github repository, as well a
 - **Invite the Bot:** [Add Morpheus to your server](https://discord.com/oauth2/authorize?client_id=927533069211172885&scope=bot%20applications.commands&permissions=268823616)
 - **Join my Discord Server**: [https://discord.gg/nU63sFMcnX](https://discord.gg/nU63sFMcnX)
 
-I’m really curious to see how it performs once people start adding it to their communities, maybe even on bigger servers. One can only hope ![[maoOoOOasdgasdf.png|25]]
+I’m really curious to see how it performs once people start adding it to their communities, maybe even on bigger servers. One can only hope
+
+![[maoOoOOasdgasdf.png|50]]
