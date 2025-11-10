@@ -13,13 +13,13 @@ So, long story short: I picked up an abandoned VS Code extension that hadn't see
 
 To cut to the chase, first I want to explain what it is.
 
-### What it is
+## What it is
 
 It's a todo extension. What I find most useful about it is that it's a plaintext `.todo` file editor: syntax highlighting, stats, some handy shortcuts, tags, and other niceties. It also has an embedded view that searches your project for comments containing words like TODO, FIXME, NOTE, etc.
 
 The original extension is called `todo+` and it has something like 350K downloads, which is impressive. I named my fork Todo+2 because the name `todo++` was already taken many times, but I still managed to make a pun (todo plus two / todo too).
 
-### What I did
+## What I did
 
 I forked the repository and used a Python script that Gemini kindly provided me ([I published it as a public gist](https://gist.github.com/vycdev/95b70362e13e22e03c4f87dd733510e0)). The script uses a GitHub token to read all issues from the old repository and create new ones in my fork, preserving the original content, though as being created by my user because I obviously can't create issues in the name of others. In short, I cloned the old repository's issues and linked them to the new ones.
 
@@ -31,7 +31,7 @@ I changed a bunch of things: links, the extension name, the icon, I updated the 
 
 After fixing issues, adding some of my own features, removing others, and doing a lot of performance improvements, I finished the `5.0.0` milestone.
 
-### Publishing headaches
+## Publishing headaches
 
 I got stuck trying to publish from the terminal because Azure blocked account creation or token generation, so I gave up on the terminal flow and uploaded the extension manually. Imo, pretty stupid that you can't create a token on the same website and dashboard that you use to manually upload extensions. I also submitted a domain verification. Now I can proudly use my own version of the extension.
 
