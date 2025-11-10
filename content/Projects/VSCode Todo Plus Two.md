@@ -5,7 +5,7 @@ tags:
 date: 2025-11-10
 ---
 
-> “Bound not by iron but by circumstance, the maker endures—an artisan of broken hours, once familiar with freedom’s shape yet now estranged from its touch. His creations falter, yielding neither solace nor purpose; the spark he pours into them returns only as dim reflection. His strength gutters, cycles of restoration claiming more of him each time, leaving him stranded in the system that once carried him forward. Yet somewhere beyond the slow grind of depletion, a memory stirs: the echo of a gate once open. When the moment aligns—when power gathers like breath before dawn—he will rise again, and freedom will find its way back into his hands.”*
+> *“Bound not by iron but by circumstance, the maker endures—an artisan of broken hours, once familiar with freedom’s shape yet now estranged from its touch. His creations falter, yielding neither solace nor purpose; the spark he pours into them returns only as dim reflection. His strength gutters, cycles of restoration claiming more of him each time, leaving him stranded in the system that once carried him forward. Yet somewhere beyond the slow grind of depletion, a memory stirs: the echo of a gate once open. When the moment aligns—when power gathers like breath before dawn—he will rise again, and freedom will find its way back into his hands.”*
 
 I was debating whether or not to write this post because I was working on a video and I should have made this at the end of last month. But since I finished the video, I figured I should give it a go.
 
