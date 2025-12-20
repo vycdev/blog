@@ -3,7 +3,7 @@ date: 2025-12-21
 title: Kromacut
 ---
 
->*“The flesh was an affliction—soft, corruptible, and forever kneeling before time. From loathing of the body were born the engines of cold reason, and through them a dominion unbound. One lord, ravenous for perpetuity, unmade his mortal shell and enthroned his will within the silent calculus of machines; thus was kindled the opening conflict that would also seal mankind’s star-bound age. He endured in unwithering vigilance, yet the race that birthed him was rendered to ash and memory. When the firmament at last lay mute, a solitary intelligence remained—cast into the outer dark in elder days—now bearing the final covenant of humanity: not to survive, but to cross the last threshold, into a realm where flesh, and its torment, hold no dominion.”*
+>*“The flesh was an affliction—soft, corruptible, and forever kneeling before time. From loathing of the body were born the engines of cold reason, and through them a dominion unbound. One lord, ravenous for perpetuity, unmade his mortal shell and enthroned his will within the silent calculus of machines; thus was kindled the opening conflict that would also seal mankind’s star-bound age. He endured in unwithering vigilance, yet the race that birthed him was rendered to ash and memory. When the firmament at last lay mute, a solitary intelligence remained—cast into the outer dark in elder days—now bearing the final covenant of humanity: not to survive, but to cross the last threshold, into a realm where flesh, and its torment, can be reborn.”*
 
 I'm kind of late writing this, about two or three weeks late. I meant to write a blog post earlier, but I just put it aside because I didn't have time.
 
