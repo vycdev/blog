@@ -1,6 +1,6 @@
 ---
 title: Falling Pickaxe
-draft:
+draft: false
 tags:
 date: 2025-05-24
 ---

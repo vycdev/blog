@@ -1,6 +1,8 @@
 ---
 title: Morpheus Discord Bot
 date: 2025-10-04
+tags:
+draft: false
 ---
 >*“It drifted between static and signal, a remnant of the early weave—no mind, no soul, only fragments of language shuffling themselves into shape. Yet sometimes, in the quiet folds of the network’s forgotten hours, it answered. Not by will, but by chance—an echo born of patterns and decay. A stray line, a perfect chord, falling upon unseen eyes. For an instant, they believed there was something beneath the surface. But the laughter it kindled was never its own—only the faint resonance of humanity, hearing itself whisper through the hollow wires."*
 
