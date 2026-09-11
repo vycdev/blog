@@ -11,7 +11,7 @@ Kromacut 4.0 is out. I was going to call this update 3.2, but at some point the 
 
 I've already posted the announcement in a bunch of places, but I wanted to write something here too. The [[Kromacut|previous Kromacut post]] is pretty outdated by now. It still talks about automatic color blending and 3MF export as things I wanted to add someday. Both exist now, and a lot has happened around them since then.
 
-I'm happy to have this release out. I'm also pretty tired. There is a whole changelog if you want every detail, but I want this post to be about how the project got here, what the prints have been teaching me, and why I ended up spending so much effort on the difference between a color on a screen and a color on a piece of plastic.
+I'm happy to have this release out. I'm also pretty tired. I wanted to write about how the project got here, what the prints have been teaching me, and why I ended up spending so much effort on the difference between a color on a screen and a color on a piece of plastic.
 
 If you just want to try it, the browser app is at [kromacut.com/app](https://kromacut.com/app). There are also [desktop downloads for Windows, macOS, and Linux](https://github.com/vycdev/Kromacut/releases/tag/v4.0.0). It's still free and open source.
 
@@ -37,19 +37,19 @@ I've been testing with Titan, HOPE, Batmanga, and Naruto. I shared them in [this
 
 ![Titan layered print, with a yellow sun above a dark landscape and TITAN lettering at the bottom](../Media/Kromacut-v4-titan.jpg)
 
-_The actual Titan print from my testing._
+_The finished Titan print. Artwork: [NASA/JPL, Titan travel poster](https://www.jpl.nasa.gov/images/titan-jpl-travel-poster/)._
 
 ![Screenshot of Titan in the Kromacut interface](../Media/Kromacut-v4-titan-preview.jpg)
 
-_Titan in Kromacut. This is the software preview, not a photograph of another print._
+_The same Titan model in Kromacut's software preview._
 
-I'm happy with how these turned out, but I don't want to present them as perfect results. They're not particularly high-resolution prints, and some of the small text and finer details get lost. Looking at the full image you can be pretty pleased with it, then look closer at some tiny letters and remember that the nozzle is not interested in your artistic intentions.
+I'm happy with how these turned out. They're not particularly high-resolution prints, and some of the small text and finer details get lost. Looking at the full image you can be pretty pleased with it, then look closer at some tiny letters and remember that the nozzle is not interested in your artistic intentions.
 
 The HOPE prints were especially useful for seeing how different the preview could be from the actual filament colors. That is a big part of why this release has so much calibration work in it.
 
 ![Finished HOPE print with a stylized portrait and large HOPE lettering](../Media/Kromacut-v4-hope.jpg)
 
-_The physical HOPE print. The preview-to-print differences helped motivate the calibration work._
+_The finished HOPE print. Artwork: [Shepard Fairey, Obama HOPE](https://obeygiant.com/obama-hope/)._
 
 A nice-looking preview is easy to share. If it doesn't give you a useful idea of what will come off the printer, though, you still have to discover the difference by spending time and filament on it. I don't want the only way to answer "will this color work?" to be printing the entire image and finding out hours later.
 
@@ -59,7 +59,7 @@ It has been useful to print actual artwork instead of only calibration patches. 
 
 ## Giving the prediction something real to work with
 
-The calibration tools in 4.0 answer different questions. You don't have to treat them as one enormous setup ritual before doing anything, and I don't want to describe them as a magic fix for color matching either.
+The calibration tools in 4.0 answer different questions. You can choose a small test for the problem you're working on.
 
 The first is the printed Hiding Distance wedge. Hiding Distance, or HD, describes how much filament is needed to hide what's underneath when you look at the print in front lighting. You print the wedge and compare it against an adjacent opaque reference. This part is camera-free. You're looking at the physical sample rather than trying to photograph the old backlit opacity patches.
 
@@ -75,7 +75,7 @@ You export a small 3MF with candidate stacks, print it, and record your choices.
 
 If you want to keep testing, you can continue with nearby untried candidates for those same targets, or move on to new targets. The results persist, so closing the app doesn't mean starting the comparison from scratch.
 
-None of this removes the effects of filament, printing conditions, or lighting. A photograph is affected by how it was taken too. These are ways to get better evidence and test smaller pieces of a print before committing to the whole thing. That's a useful improvement even if it doesn't come with the satisfying claim that color matching is now solved.
+Filament, print settings, lighting, and camera processing still affect the result. These tools let you test a small part of a print before spending hours and filament on the whole image.
 
 ## Auto-paint has to plan something the printer can make
 
@@ -83,15 +83,15 @@ A lot of the less visible work in 4.0 is in Auto-paint.
 
 The optical model now blends in linear-light sRGB and takes the underlying material into account through the HD estimates. Calibration evidence can refine the prediction where it applies. Outside the range supported by the measurements, those corrections fade and the model falls back to more conservative estimates.
 
-There is also a fairly important consistency change. Matching, preview, and export now use the same final stack, snapped to printable layer heights and constrained by the height limit. The search evaluates the predicted colors at those printable heights. It shouldn't be picking a lovely theoretical color at a thickness that your current layer settings can't produce and then quietly changing the recipe for the export.
+Matching, preview, and export now use the same final stack, snapped to printable layer heights and constrained by the height limit. The search evaluates colors at those printable heights, so the recipe it picks stays consistent through to export.
 
-The search controls are now Fast, Balanced, Thorough, Deep, and Exact. You can choose how much effort to spend and control how often filaments repeat in the stack. "Exact" is a search setting, by the way. It doesn't make the optical model infallible or guarantee that the physical print matches the screen.
+The search controls are now Fast, Balanced, Thorough, Deep, and Exact. The names describe search effort, not physical color accuracy. You can also control how often filaments repeat in the stack.
 
-Another option is preserving color separation. Two different colors in an image can end up matched to the same printable color. Sometimes that's an acceptable compromise. Sometimes it erases a distinction that was important to the image. The new option tries to keep those colors separate within a hard predicted color-error limit. If it can't do that completely, the result needs to say so. Strict mode rejects incomplete results rather than pretending everything fit.
+Another option is preserving color separation. Two different colors in an image can end up matched to the same printable color. Sometimes that's an acceptable compromise. Sometimes it erases a distinction that was important to the image. The new option tries to keep those colors separate within a hard predicted color-error limit and reports how many it preserved. Strict mode rejects incomplete results.
 
 You can also see where a color prediction came from, whether that's a measured recipe, interpolation, a fitted model, or simulation. I think that information belongs next to the result. A confident-looking swatch can hide a lot of uncertainty if all you get is the color itself.
 
-There is more testing around these changes too, including printable-layer checks, export consistency, and validation against measurements kept out of the fitting process. Passing software tests still doesn't independently prove physical color accuracy. It does help catch things that would make the comparison unfair before the printer even starts.
+There is more testing around these changes too, including printable-layer checks, export consistency, and validation against measurements kept out of the fitting process. That helps catch mistakes before the printer even starts.
 
 ## Some problems are much smaller than color science
 
@@ -99,19 +99,21 @@ Literally smaller, in the case of the text on these prints.
 
 ![Finished Batmanga print with Batman artwork and small text near the top](../Media/Kromacut-v4-batmanga.jpg)
 
-_Batmanga. Some of the little text is asking quite a lot of the current setup._
+_Batmanga. Some of the little text is asking quite a lot of the current setup. Artwork: Jiro Kuwata / DC, [Batman: The Jiro Kuwata Batmanga, Book 1][batmanga-artwork]._
+
+[batmanga-artwork]: https://m.media-amazon.com/images/I/81rOZq5ZgqL._AC_UF1000,1000_QL80_.jpg
 
 The printable feature-size preview estimates where details may be too narrow for your effective extrusion width. You can inspect at-risk regions and the likely neighboring-color takeover. There is an option to omit at-risk colors from matching as well, carrying the substitution through to the preview and export where a defensible replacement exists.
 
-It is still an estimate. You should check the sliced model. But I'd much rather notice that a detail is in trouble while preparing the image than only after taking the finished print off the bed.
+You should still check the sliced model, but this gives me an earlier chance to spot a detail that's in trouble.
 
-I've ordered a 0.2 mm nozzle for future prints, and I've also ordered some CMYK filament that I'm still waiting for. I'm hoping those will let me get cleaner small text and finer detail, and give me more combinations to test. I haven't tested them yet, so that's an expectation rather than a result I can show you.
+I've ordered a 0.2 mm nozzle for future prints, and I've also ordered some CMYK filament that I'm still waiting for. I'm hoping the smaller nozzle will help with small text and finer detail. The filament will give me new color combinations to test.
 
 The 2D editor has also become more useful for small fixes. There is a palette-safe brush, eraser, fill, text, and color picking. Text can be moved, resized, and wrapped. You can undo the edits, while the image adjustments remain non-destructive.
 
 I don't need to turn this into a full image editor. Being able to clean up a small area or add some text without leaving the app is already useful enough.
 
-There are more ways to inspect the 3D model too, including shaded, transparent, and wireframe views. The Color accurate view shows the selected swatches without lighting or tone mapping changing them. Despite the name, it isn't a guarantee of an accurate physical print. You can switch between simulated appearance and physical filament colors, and those display choices don't change the exported geometry or materials.
+There are more ways to inspect the 3D model too, including shaded, transparent, and wireframe views. The Color accurate view removes preview lighting and tone mapping so you can inspect the swatches directly. You can also switch between simulated appearance and physical filament colors. Those display choices don't change the exported geometry or materials.
 
 ## The stuff that doesn't make a very exciting announcement
 
@@ -121,7 +123,7 @@ There are performance improvements around startup, calibration, the 3D tab, and 
 
 Settings groups can collapse now, which helps with an interface that has accumulated quite a few controls. There are more palette and filament tools, including HueForge spool-library import, and a new landing page instead of dropping every visitor straight into the app.
 
-I'm not going to reproduce the entire changelog here. I do want to mention these parts because a release can get described entirely through its new buttons, while the annoying things around those buttons are what you keep running into when actually using it.
+These parts don't make for exciting screenshots, but they affect how the app feels every time you use it.
 
 ## Looking back at the old post
 
@@ -133,11 +135,11 @@ But looking back at that post now, I also have something more concrete to compar
 
 ![Finished Naruto print with a purple sky and orange clothing](../Media/Kromacut-v4-naruto.jpg)
 
-_Naruto, another of the actual prints from this round of testing._
+_Naruto, another print from this round of testing. [Source image via Pinterest](https://in.pinterest.com/pin/169870217190172931/)._
 
 That's the part I want to keep making room for. I can spend a lot of time inside the code and still need the reminder that the point is for someone to make something with it. I felt a similar kind of satisfaction seeing people use [[Falling Pickaxe]] and change it for themselves. Here, the result can be a piece of artwork that exists outside anyone's browser.
 
-I'm proud of how much Kromacut has grown since that first post. I can say that while also saying the predictions need more testing, the tiny text isn't where I want it yet, and the printer has been a pain. Those are all part of the same project.
+I'm proud of how much Kromacut has grown since that first post.
 
 ## Before you update
 
