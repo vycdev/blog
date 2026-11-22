@@ -1,0 +1,7 @@
+node_modules
+public
+.git
+.quartz-cache
+# registry credentials for publish/publish.ps1 must never enter the build context
+.env
+**/.env
